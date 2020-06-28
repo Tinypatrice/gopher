@@ -15,7 +15,7 @@ class GopherSprite(pg.sprite.Sprite):
         super().__init__()
         self.images = []
         for i in range(0,16):
-            filename = '/Users/tinypatrice/Desktop/gophers/鼠%0d.png' % i
+            filename = 'pictures/gophers png/鼠%d.png' % i
             self.images.append(pg.transform.smoothscale
                                (pg.image.load(filename), (134,123))) #原尺寸134*123/0.7倍 94*86/
 
@@ -95,9 +95,9 @@ screen = pg.display.set_mode(window_size)
 screen.fill((255,255,255))
 pg.display.set_caption('gopher')
 bg_image = pg.transform.scale(
-        pg.image.load('/Users/tinypatrice/Desktop/gophers/草.jpg'), (window_size[0], window_size[1]))
+        pg.image.load('pictures/草.jpg'), (window_size[0], window_size[1]))
 
-hole_image = pg.image.load('/Users/tinypatrice/Desktop/gophers/鼠0.png')
+hole_image = pg.image.load('pictures/gophers png/鼠0.png')
 
 clock = pg.time.Clock()
 pg.time.set_timer(pg.USEREVENT, 1000)
